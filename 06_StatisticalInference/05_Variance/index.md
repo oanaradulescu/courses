@@ -53,7 +53,7 @@ $$Var(X) = E[X^2] - E[X]^2 = p - p^2 = p(1 - p)$$
 
 ---
 ## Distributions with increasing variance
-<img src="assets/fig/unnamed-chunk-1.png" title="plot of chunk unnamed-chunk-1" alt="plot of chunk unnamed-chunk-1" style="display: block; margin: auto;" />
+<img src="figure/unnamed-chunk-1.png" title="plot of chunk unnamed-chunk-1" alt="plot of chunk unnamed-chunk-1" style="display: block; margin: auto;" />
 
 ---
 ## The sample variance 
@@ -66,7 +66,7 @@ the sample mean)
 - It is also a random variable
   - It has an associate population distribution
   - Its expected value is the population variance
-  - Its distribution gets more concentrated around the population variance with mroe data
+  - Its distribution gets more concentrated around the population variance with more data
 - Its square root is the sample standard deviation
 
 
@@ -74,11 +74,11 @@ the sample mean)
 ## Simulation experiment
 ### Simulating from a population with variance 1
 
-<img src="assets/fig/unnamed-chunk-2.png" title="plot of chunk unnamed-chunk-2" alt="plot of chunk unnamed-chunk-2" style="display: block; margin: auto;" />
+<img src="figure/unnamed-chunk-2.png" title="plot of chunk unnamed-chunk-2" alt="plot of chunk unnamed-chunk-2" style="display: block; margin: auto;" />
 
 ---
 ## Variances of x die rolls
-<img src="assets/fig/unnamed-chunk-3.png" title="plot of chunk unnamed-chunk-3" alt="plot of chunk unnamed-chunk-3" style="display: block; margin: auto;" />
+<img src="figure/unnamed-chunk-3.png" title="plot of chunk unnamed-chunk-3" alt="plot of chunk unnamed-chunk-3" style="display: block; margin: auto;" />
 
 
 ---
@@ -96,13 +96,13 @@ the population variance
 
 ---
 ## To summarize
-- The sample variance, $S^2$, estimates the population variance, $\sigma^2$
+- The sample variance, $s^2$, estimates the population variance, $\sigma^2$
 - The distribution of the sample variance is centered around $\sigma^2$
 - The the variance of sample mean is $\sigma^2 / n$
   - Its logical estimate is $s^2 / n$
-  - The logical estimate of the standard error is $S / \sqrt{n}$
-- $S$, the standard deviation, talks about how variable the population is
-- $S/\sqrt{n}$, the standard error, talks about how variable averages of random samples of size $n$ from the population are
+  - The logical estimate of the standard error is $s / \sqrt{n}$
+- $s$, the standard deviation, talks about how variable the population is
+- $s/\sqrt{n}$, the standard error, talks about how variable averages of random samples of size $n$ from the population are
 
 ---
 ## Simulation example
@@ -117,7 +117,7 @@ sd(apply(matrix(rnorm(nosim * n), nosim), 1, mean))
 ```
 
 ```
-## [1] 0.3156
+## [1] 0.3192
 ```
 
 ```r
@@ -143,7 +143,7 @@ sd(apply(matrix(runif(nosim * n), nosim), 1, mean))
 ```
 
 ```
-## [1] 0.09017
+## [1] 0.08992
 ```
 
 ```r
@@ -169,7 +169,7 @@ sd(apply(matrix(rpois(nosim * n, 4), nosim), 1, mean))
 ```
 
 ```
-## [1] 0.6219
+## [1] 0.63
 ```
 
 ```r
@@ -196,7 +196,7 @@ sd(apply(matrix(sample(0 : 1, nosim * n, replace = TRUE),
 ```
 
 ```
-## [1] 0.1587
+## [1] 0.154
 ```
 
 ```r
@@ -218,7 +218,7 @@ n<-length(x)
 
 ---
 ## Plot of the son's heights
-<img src="assets/fig/unnamed-chunk-9.png" title="plot of chunk unnamed-chunk-9" alt="plot of chunk unnamed-chunk-9" style="display: block; margin: auto;" />
+<img src="figure/unnamed-chunk-9.png" title="plot of chunk unnamed-chunk-9" alt="plot of chunk unnamed-chunk-9" style="display: block; margin: auto;" />
 
 ---
 ## Let's interpret these numbers
@@ -231,7 +231,7 @@ round(c(var(x), var(x) / n, sd(x), sd(x) / sqrt(n)),2)
 ## [1] 7.92 0.01 2.81 0.09
 ```
 
-<img src="assets/fig/unnamed-chunk-11.png" title="plot of chunk unnamed-chunk-11" alt="plot of chunk unnamed-chunk-11" style="display: block; margin: auto;" />
+<img src="figure/unnamed-chunk-11.png" title="plot of chunk unnamed-chunk-11" alt="plot of chunk unnamed-chunk-11" style="display: block; margin: auto;" />
 
 
 ---
